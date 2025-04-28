@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Current Cars</h2>
+
+<table>
+    <thead>
+        <tr>
+            <th>Phone</th>
+            <th>Client Name</th>
+            <th>Board number</th>
+            <th>Car Model</th>
+            <th>Parking Location</th>
+            <th>Car Color</th>
+            <th>Entry Date</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for row in rows %}
+        <tr>
+            <td>{{ row.phone }}</td>
+            <td>{{ row.client_name }}</td>
+            <td>{{ row.car_number }}</td>
+            <td>{{ row.car_model }}</td>
+            <td>{{ row.location }}</td>
+            <td>{{ row.car_color }}</td>
+            <td>{{ row.date }}</td>
+            <td>
+                <a href="/delete/{{ row.phone }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

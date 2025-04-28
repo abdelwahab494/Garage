@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h2>Dashboard</h2>
+    <div class="dashboard-options">
+        <a href="/add_car" class="option-card">
+            <h3>Add Car</h3>
+            <p>Add a new car to the system.</p>
+        </a>
+        <a href="/current_cars" class="option-card">
+            <h3>Current Cars</h3>
+            <p>View the list of currently parked cars.</p>
+        </a>
+        <a href="/history" class="option-card">
+            <h3>History</h3>
+            <p>View the history of all cars.</p>
+        </a>
+        <a href="/requested_cars" class="option-card">
+            <h3>Requested Cars</h3>
+            <p>View the list of cars requested for retrieval.</p>
+        </a>
+    </div>
+</div>
+{% endblock %}

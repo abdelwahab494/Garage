@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Add Car</h2>
+
+<form action="/add_car" method="POST">
+    <label for="phone">Clint Phone number:</label>
+    <input type="text" id="phone" name="phone" required><br>
+    <label for="client-name">Client Name:</label>
+    <input type="text" id="client-name" name="client-name" ><br>
+    <label for="car-num">Board Number:</label>
+    <input type="text" id="car-num" name="car-num" required><br>
+    <label for="car-model">Car Model:</label>
+    <select name="car-model" id="car-model">
+        <option value="Unknown">Unknown</option>
+        <option value="Mercedes">Mercedes</option>
+        <option value="BMW">BMW</option>
+        <option value="Tesla">Tesla</option>
+        <option value="Ford">Ford</option>
+        <option value="Audi">Audi</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Chevrolet">Chevrolet</option>
+        <option value="Nissan">Nissan</option>
+        <option value="KIA">KIA</option>
+        <option value="Porsche">Porsche</option>
+        <option value="Lamborghini">Lamborghini</option>
+        <option value="Ferrari">Ferrari</option>
+    </select><br>
+    <label for="car-location">Parking Place:</label>
+    <input type="text" id="car-location" name="car-location" required><br>
+    <label for="car-color">Car Color:</label>
+    <select name="car-color" id="car-color">
+        <option value="Unknown">Transparent</option>
+        <option value="Red">Red</option>
+        <option value="White">White</option>
+        <option value="Black">Black</option>
+        <option value="Blue">Blue</option>
+        <option value="Gray">Gray</option>
+        <option value="Silver">Silver</option>
+        <option value="Green">Green</option>
+        <option value="Gold">Gold</option>
+        <option value="Brown">Brown</option>
+    </select><br>
+    <button type="submit">Add Car</button>
+</form>
+{% endblock %}

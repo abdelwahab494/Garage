@@ -1,0 +1,79 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="dashboard-container">
+    <h2>Dashboard</h2>
+    <div class="dashboard-options">
+        <a href="/add-car" class="option-card">
+            <h3>Add Car</h3>
+            <p>Add a new car to the system.</p>
+        </a>
+        <a href="/current-cars" class="option-card">
+            <h3>Current Cars</h3>
+            <p>View the list of currently parked cars.</p>
+        </a>
+        <a href="/history" class="option-card">
+            <h3>History</h3>
+            <p>View the history of all cars.</p>
+        </a>
+        <a href="/requested-cars" class="option-card">
+            <h3>Requested Cars</h3>
+            <p>View the list of cars requested for retrieval.</p>
+        </a>
+    </div>
+</div>
+{% endblock %}
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f9f9f9;
+    color: #333;
+}
+
+.dashboard-container {
+    text-align: center;
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+}
+
+h2 {
+    color: #007BFF;
+    margin-bottom: 20px;
+}
+
+.dashboard-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.option-card {
+    display: block;
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    color: #333;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.option-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.option-card h3 {
+    margin: 0 0 10px;
+    color: #007BFF;
+}
+
+.option-card p {
+    margin: 0;
+    color: #555;
+}
+</style>

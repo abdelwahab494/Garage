@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block total %}
+    <span>({{ session.get('total') }})</span>
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h2 style="text-align: center; margin-top: 20px;">Requested Cars</h2>
+
+    {% if rows %}
+        <table border="1" style="width: 100%; text-align: center; margin-top: 20px;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Phone Number</th>
+                    <th>Plate Number</th>
+                    <th>Location</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for row in rows %}
+                <tr>
+                    <td>{{ row.id }}</td>
+                    <td>{{ row.phone }}</td>
+                    <td>{{ row.car_number }}</td>
+                    <td>{{ row.location }}</td>
+                    <td>
+                        <a href="/out/{{ row.phone }}">Out</a>
+                    </td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p style="text-align: center; margin-top: 20px;">No cars are currently requested.</p>
+    {% endif %}
+</div>
+{% endblock %}
